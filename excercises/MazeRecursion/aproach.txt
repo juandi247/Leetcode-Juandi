@@ -1,0 +1,69 @@
+
+The aproach of the problem find the PATH is using recursion. 
+WE need to find the path or return true or false, if there is a way
+to go from S to E
+
+S _ _ #
+_ # # #
+_ _ _ E
+
+
+Process:
+
+1. Identify base cases
+2. Identify recursion case
+
+
+Base Cases:
+
+    1. Out of bounds, check that we dont go out of bounds on the grid
+    2. Check if were we move to is a wall
+    3. Check if we reached the end
+    4. Check if we have seen the Point, so we dont go again to it
+
+
+
+Recursion Case:
+
+    1. We need to go in all four directions. 
+        X, Y+1  (UP)
+        X, Y-1 (DOWN)
+        X+1, Y (Right)
+        X-1, Y (Left)
+
+    Recurse using the same function, if it returns true, then return generally true.
+
+
+
+
+pre -> we need to add the point to the seen array, add to the path array the point.
+recurse -> check all 4 directions, and if recursion was true, return true
+post -> if we reach this post, means that the recursion part didnt return true, so we pop the point,
+		because it will not be part of our array
+
+
+
+
+/*
+My aproach:
+The problems of running through a path, most of the times will be involved recursion
+
+There would be some base cases (cases where we need to stop recursing)
+
+1. We got out of bound, when we reach the limit of the grid, we need to return false
+
+2. We are on a wall, if we are on a wall we cannot go through
+
+3. We reach the end, if our curernt point is the end, so we stop recursing
+
+4. If we already saw that path, we dont want to recurse again.const
+
+
+Then we would have the recursion way: For this we would need to have the following flow:
+
+pre -> we need to add the point to the seen array, add to the path array the point.
+recurse -> check all 4 directions, and if recursion was true, return true
+post -> if we reach this post, means that the recursion part didnt return true, so we pop the point,
+		because it will not be part of our array
+
+*/
