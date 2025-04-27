@@ -1,0 +1,18 @@
+/*
+Base Cases:
+
+1. we reached 1 or the number, if we have 1 returned then, go over the stack of functions
+example:
+5 + (sumnumber( 5 -1))
+4 + (sumnumber( 4 -1))
+3 + (sumnumber( 3 -1))
+2 + (sumnumber( 2 -1))
+we reached here the sumNumber (1) so the function returns 1. So it would now go up to
+
+2 + 1 = 3
+3 + 3= 6
+4 + 6= 10
+5 + 10 = 15
+
+return final is 15
+*/

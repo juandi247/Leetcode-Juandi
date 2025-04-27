@@ -94,6 +94,7 @@ func canReach(grid [][]int, start Point, end Point) bool {
 
 	// define the path array
 	var path []Point
+
 	
 	return WalkingTheGrid(grid,start,end,seen,&path)
 
