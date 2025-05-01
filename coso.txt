@@ -1,0 +1,192 @@
+Ejercicio 1: Suma de Números
+Problema: Escribe una función recursiva que calcule la suma de todos los números desde 1 hasta un número dado n. No puedes usar un bucle, solo recursión.
+
+Ejemplo:
+
+go
+Copiar
+Editar
+sumaRecursiva(5)  // Salida esperada: 15
+Solución: La idea es sumar n con la suma de los números hasta n-1, repitiendo esto recursivamente.
+
+
+
+
+
+
+
+Ejercicio 2: Factorial
+Problema: Escribe una función recursiva que calcule el factorial de un número n. El factorial de un número n es el producto de todos los enteros positivos menores o iguales a n.
+
+Ejemplo:
+
+go
+Copiar
+Editar
+factorial(5)  // Salida esperada: 120
+Solución: El factorial de n se puede calcular como n * factorial(n-1), con el caso base siendo factorial(0) = 1.
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicio 3: Fibonacci
+Problema: Escribe una función recursiva que calcule el n-ésimo número de la secuencia de Fibonacci. La secuencia comienza con 0, 1, 1, 2, 3, 5, 8,... donde el primer número es 0 y el segundo es 1.
+
+Ejemplo:
+
+go
+Copiar
+Editar
+fibonacci(6)  // Salida esperada: 8
+Solución: La secuencia de Fibonacci se puede calcular recursivamente como fibonacci(n) = fibonacci(n-1) + fibonacci(n-2) con el caso base siendo fibonacci(0) = 0 y fibonacci(1) = 1.
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicio 4: Contar los Elementos de un Slice
+Problema: Escribe una función recursiva que cuente cuántos elementos hay en un slice de enteros. No puedes usar la función len().
+
+Ejemplo:
+
+go
+Copiar
+Editar
+contarElementos([]int{1, 2, 3, 4, 5})  // Salida esperada: 5
+Solución: La idea es recorrer el slice y restar 1 a cada llamada recursiva hasta llegar a un caso base donde el slice esté vacío.
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicio 5: Buscar un Elemento en un Slice
+Problema: Escribe una función recursiva que busque si un número está presente en un slice de enteros. La función debe devolver true si el número está presente, y false en caso contrario.
+
+Ejemplo:
+
+go
+Copiar
+Editar
+buscarElemento([]int{1, 2, 3, 4, 5}, 3)  // Salida esperada: true
+buscarElemento([]int{1, 2, 3, 4, 5}, 6)  // Salida esperada: false
+Solución: El caso base es cuando el slice está vacío o cuando se encuentra el elemento. De lo contrario, se realiza una llamada recursiva con el siguiente elemento del slice.
+
+
+
+
+
+
+
+
+
+Ejercicio 6: Potencia de un Número
+Problema: Escribe una función recursiva que calcule x^n (x elevado a la potencia n), sin usar el operador ** o funciones de biblioteca.
+
+Ejemplo:
+
+go
+Copiar
+Editar
+potencia(2, 3)  // Salida esperada: 8
+Solución: El cálculo se puede hacer multiplicando x por sí mismo n veces. El caso base sería cuando n = 0, que retorna 1.
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicio 7: Palíndromos
+Problema: Escribe una función recursiva que determine si una cadena de texto es un palíndromo. Un palíndromo es una palabra que se lee igual de izquierda a derecha que de derecha a izquierda.
+
+Ejemplo:
+
+go
+Copiar
+Editar
+esPalindromo("racecar")  // Salida esperada: true
+esPalindromo("hello")    // Salida esperada: false
+Solución: La idea es comparar el primer y último carácter de la cadena. Si son iguales, llama a la función recursivamente con la subcadena sin esos dos caracteres. El caso base es cuando la longitud de la cadena es 0 o 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicio 8: Generar Subcadenas
+Problema: Escribe una función recursiva que genere todas las subcadenas posibles de una cadena de texto. Devuelve un slice de subcadenas.
+
+Ejemplo:
+
+go
+Copiar
+Editar
+subcadenas("abc")  // Salida esperada: ["a", "ab", "abc", "b", "bc", "c"]
+Solución: Se puede generar subcadenas de la forma recursiva, añadiendo un carácter a la subcadena en cada llamada recursiva.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicio 9: Sumar los Elementos de una Matriz
+Problema: Escribe una función recursiva que sume todos los elementos de una matriz de enteros (una matriz bidimensional).
+
+Ejemplo:
+
+go
+Copiar
+Editar
+sumarMatriz([][]int{
+	{1, 2, 3},
+	{4, 5, 6},
+	{7, 8, 9},
+})  // Salida esperada: 45
+Solución: El problema se resuelve recorriendo cada fila de la matriz recursivamente y sumando sus elementos. Cada fila se puede tratar como un slice, y dentro de la función recursiva, recorres cada fila y luego llamas recursivamente a la siguiente fila.
+
