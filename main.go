@@ -3,6 +3,7 @@ package main
 import (
 	// "LeetcodeJuandi/PointersGolang"
 	"LeetcodeJuandi/excercises/arraysSlices"
+	somechatgptexercises "LeetcodeJuandi/excercises/someChatGPTExercises"
 	// "LeetcodeJuandi/excercises/factorialpackage"
 	"fmt"
 )
@@ -10,6 +11,22 @@ import (
 var mySlice []int //here we define a slice, its NOT an array
 
 func main() {
+
+
+	miRectangulito:=somechatgptexercises.NewRectangle(20,80)
+
+	area:=miRectangulito.Area()
+	perim:=miRectangulito.Perimeter()
+fmt.Printf("Area of rectangle %f, permiter %f \n", area, perim)
+
+	Juandi := somechatgptexercises.NewPerson(23, "juanedi", "coso")
+	fmt.Println(*Juandi) 
+
+	Juandi.WriteAddres("nueva dirección")
+	fmt.Println(Juandi.Addr)
+
+	fmt.Println("AAASASAS")
+
 	// append things to a slice
 	mySlice = append(mySlice, 3, 3, 43, 5, 45, 46,4)
 	fmt.Println(mySlice)
