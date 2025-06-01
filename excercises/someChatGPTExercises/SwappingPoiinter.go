@@ -5,7 +5,7 @@ import "fmt"
 func swap(a, b *int) {
 	// derrefernce the a value, because its a pointer, so we derreference it to obtain the value
 	temporalValue := *a
-// asign the b value to a
+	// asign the b value to a
 	*a = *b
 	*b = temporalValue
 	// tu código aquí

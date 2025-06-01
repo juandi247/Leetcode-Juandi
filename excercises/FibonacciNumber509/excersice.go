@@ -1,18 +1,15 @@
 package FibonacciNumber509
 
+func fibonacci(number int) int {
 
-func fibonacci(number int) int{
-
-	if number==0{
+	if number == 0 {
 		return 0
 	}
 
-	if number ==1{
-	return 1
+	if number == 1 {
+		return 1
 	}
 
-	return fibonacci(number-1)+ fibonacci(number-2)
+	return fibonacci(number-1) + fibonacci(number-2)
 
 }
-
-

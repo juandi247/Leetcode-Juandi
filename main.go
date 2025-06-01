@@ -12,15 +12,14 @@ var mySlice []int //here we define a slice, its NOT an array
 
 func main() {
 
+	miRectangulito := somechatgptexercises.NewRectangle(20, 80)
 
-	miRectangulito:=somechatgptexercises.NewRectangle(20,80)
-
-	area:=miRectangulito.Area()
-	perim:=miRectangulito.Perimeter()
-fmt.Printf("Area of rectangle %f, permiter %f \n", area, perim)
+	area := miRectangulito.Area()
+	perim := miRectangulito.Perimeter()
+	fmt.Printf("Area of rectangle %f, permiter %f \n", area, perim)
 
 	Juandi := somechatgptexercises.NewPerson(23, "juanedi", "coso")
-	fmt.Println(*Juandi) 
+	fmt.Println(*Juandi)
 
 	Juandi.WriteAddres("nueva dirección")
 	fmt.Println(Juandi.Addr)
@@ -28,37 +27,31 @@ fmt.Printf("Area of rectangle %f, permiter %f \n", area, perim)
 	fmt.Println("AAASASAS")
 
 	// append things to a slice
-	mySlice = append(mySlice, 3, 3, 43, 5, 45, 46,4)
+	mySlice = append(mySlice, 3, 3, 43, 5, 45, 46, 4)
 	fmt.Println(mySlice)
 
-
-	palabrasArray:= []string{"coso","coso","aaa","aaa","mimi","maama","coso","etc","aaa","mimi"}
+	palabrasArray := []string{"coso", "coso", "aaa", "aaa", "mimi", "maama", "coso", "etc", "aaa", "mimi"}
 
 	arraysSlices.CountWords(palabrasArray)
 
-
-
-	nuevoArray := []int{1,2,3,4,5}
+	nuevoArray := []int{1, 2, 3, 4, 5}
 	fmt.Println(arraysSlices.ModifyArray(&nuevoArray))
 
 	arraysSlices.InvertArray(nuevoArray)
 
+	OrganizedArray := []int{1, 2, 3, 4, 5, 7, 8, 9, 10, 34, 55, 77, 90, 100}
+	DisorganizedArray := []int{2, 6, 8, 2, 867, 23, 6575, 12, 23, 34}
 
-	OrganizedArray := []int{1,2,3,4,5,7,8,9,10,34,55,77,90,100}
-	DisorganizedArray := []int{2,6,8,2,867,23,6575,12,23,34}
+	coso := arraysSlices.IntersectTwoSlices(OrganizedArray, DisorganizedArray)
 
-
-	coso:=arraysSlices.IntersectTwoSlices(OrganizedArray,DisorganizedArray)
-
-	fmt.Println("resultado de intersect",coso )
+	fmt.Println("resultado de intersect", coso)
 	fmt.Printf("length of old slices: %d  %d, new lenght: %d \n", len(OrganizedArray), len(DisorganizedArray), len(coso))
 
-	fmt.Println("Nos dio que el numero: ", arraysSlices.SearchNumberNotOrderedList(DisorganizedArray[:],34))
+	fmt.Println("Nos dio que el numero: ", arraysSlices.SearchNumberNotOrderedList(DisorganizedArray[:], 34))
 
-	fmt.Println("Nos dio que el numero: ", arraysSlices.SearchNumberNotOrderedList(DisorganizedArray[:],90))
+	fmt.Println("Nos dio que el numero: ", arraysSlices.SearchNumberNotOrderedList(DisorganizedArray[:], 90))
 
-	fmt.Println("binary search fue: ",arraysSlices.SearchNumberOrderedList(OrganizedArray,3))
-
+	fmt.Println("binary search fue: ", arraysSlices.SearchNumberOrderedList(OrganizedArray, 3))
 
 	// arraysSlices.HeyQithSlice()
 

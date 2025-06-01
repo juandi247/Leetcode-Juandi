@@ -2,8 +2,6 @@ package PointersGolang
 
 import "fmt"
 
-
-
 // ? EASY LEVEL
 
 //! 1.
@@ -39,14 +37,7 @@ func Swap(a, b *int) {
 	fmt.Printf("nuevo valor de a: %d, nuevo valor de b: %d", *a, *b)
 }
 
-
-
-
-
-
 //  ? MEDIUM LEVEL
-
-
 
 // Nivel 2: Medio
 // Sumar elementos de un array usando punteros
@@ -54,30 +45,27 @@ func Swap(a, b *int) {
 // Crea una función que reciba un puntero al primer elemento del array y sume todos los elementos.
 
 func SumArray(arr *[5]int) int {
-   // aquí va tu código
-	sum:=0
-   for i:= range arr{
-	sum=sum+(*arr)[i]
-   }
-fmt.Println(sum)
-   return sum
+	// aquí va tu código
+	sum := 0
+	for i := range arr {
+		sum = sum + (*arr)[i]
+	}
+	fmt.Println(sum)
+	return sum
 }
-
-
-
 
 // Crear un nuevo struct usando punteros
 // Define un struct llamado Car con campos brand y year.
 // Crea una función que reciba los valores y retorne un puntero a un Car nuevo.
 
-type Car struct{
+type Car struct {
 	brand string
-	year int
+	year  int
 }
 
-func RetornarPunteroStruct(brand string, year int) *Car{
+func RetornarPunteroStruct(brand string, year int) *Car {
 
-	carrito:= Car{brand: brand, year: year}
+	carrito := Car{brand: brand, year: year}
 
 	return &carrito
 }
