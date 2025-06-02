@@ -6,11 +6,53 @@ import "fmt"
 func main() {
 
 	testSlice := []int{2, 3, 4, 7, 1, 2, 8, 1, 9, 5, 5, 2, 1, 1, 4, 56, 1}
-	// this final implementation (can be improved by checking if the array has no swaps, its already sorted, but it has the logic)
-	BubbleSort(testSlice)
 
+	QuickSort(testSlice, 0, len(testSlice)-1)
+
+
+	
+	// this final implementation (can be improved by checking if the array has no swaps, its already sorted, but it has the logic)
+	// BubbleSort(testSlice)
 	fmt.Println(testSlice)
 
+
+
+
+}
+
+
+func partition( miarray[]int, low, high int) int {//return the pivot index
+
+	pivot:= miarray[high]
+	startingIndex:= low -1  //because we need to add to the index, we need to start it in 0 -1, so on the funciotn we chck it and +1
+
+
+	for i:=low; i< high; i++{
+		// if our current value is less than the pivot, we need to swap it to the left
+		if(miarray[i]<= pivot){
+			startingIndex++
+			tmp:= miarray[i]
+			miarray[i]= miarray[startingIndex]
+			miarray[startingIndex]= tmp
+		}
+	}
+
+	startingIndex++
+	miarray[high]= miarray[startingIndex]
+	miarray[startingIndex]= pivot
+
+return startingIndex
+}
+func QuickSort(miArray []int, low, high int){
+	if low >= high{
+		return
+	}
+
+	pivotIndex:= partition(miArray, low, high)
+	QuickSort(miArray, low, pivotIndex-1)
+	QuickSort(miArray, pivotIndex+1, high)
+
+// quick sort works as divide and cqoncuer?? conquer? idk
 }
 
 func BubbleSort(miArray []int) {
