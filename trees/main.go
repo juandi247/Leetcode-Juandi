@@ -12,8 +12,9 @@ func main() {
 
 	// fmt.Println("resultaod", sumNumbers(5))
 	// fmt.Println("resultaod", sumNumbers(5))
-	fmt.Println("resultaod", reverseString("abcdefg"))
-
+	// fmt.Println("resultaod", reverseString("abcdefg"))
+	coso:= calcRange(10)
+fmt.Println("rta de rango de 1, ", coso[:])
 }
 
 func sumNumbers(upperbonud int) int {
@@ -38,6 +39,18 @@ fmt.Println("number", number)
 
 
 
+func reverseStrings(coso string) string {
+	if coso==""{
+		return ""
+	}
+return reverseStrings(coso[0:1]) + coso[1:]
+
+}
+
+
+
+
+
 
 
 func reverseString(myString string) string {
@@ -49,6 +62,21 @@ fmt.Println("vamos en ", myString)
 return reverseString(myString[1:]+ myString[0:1])
 
 }
+
+
+// rangoHasta(n) -> Lista de números: dado un número "n", retorna la lista de números desde el 0 hasta el N incluído. Por ejemplo: rangoHasta(5) -> [0,1,2,3,4,5].
+
+func calcRange (target int) []int{
+
+	if target==0{
+		return []int{10}
+	}
+
+
+a:= calcRange(target-(target+1))
+return append(a, target)
+}
+
 
 /*
 Suma de 1 a N
