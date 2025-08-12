@@ -1,16 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	rta := reverseSame("Holamiamor")
+rta:=reverseSame("Holamiamor")
 
-	rtaa := easyAproach("pescaditopipelonciooooo")
-	fmt.Println("REPUESTA", rta)
-	fmt.Println("REPUESTA DOS", rtaa)
+rtaa:=easyAproach("pescaditopipelonciooooo")
+fmt.Println("REPUESTA",rta)
+fmt.Println("REPUESTA DOS",rtaa)
 
-
-	FBcoso(10)
 }
 
 // reverse String
@@ -29,29 +29,25 @@ Aproach:
 func reverseSame(text string) string {
 	// we are going to have TWO pointers aproach
 	start := 0
-	end := len(text) - 1
+	end:= len(text)-1
 
-	sliceText := []rune(text)
+	sliceText:= []rune(text)	
 
-	for start < end {
-		sliceText[start] = rune(text[end])
-		sliceText[end] = rune(text[start])
+	for start< end{
+		sliceText[start]= rune(text[end])
+		sliceText[end]= rune(text[start])
 		start++
 		end--
 	}
 	return string(sliceText)
 }
 
-func easyAproach(texto string) string {
-	var mitexto string
-	for i := len(texto) - 1; i > 0; i-- {
-		mitexto = mitexto + string(texto[i])
-	}
-	return mitexto
+
+func easyAproach(texto string) string{
+var mitexto string
+for i:=len(texto)-1; i>0; i--{
+mitexto= mitexto+string(texto[i])
 }
-
-
-
-
-
+return mitexto
+}
 
