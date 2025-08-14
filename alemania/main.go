@@ -5,12 +5,11 @@ import (
 )
 
 func main() {
-rta:=reverseSame("Holamiamor")
 
-rtaa:=easyAproach("pescaditopipelonciooooo")
-fmt.Println("REPUESTA",rta)
-fmt.Println("REPUESTA DOS",rtaa)
+tesT:=[]int{0,0,1,1,1,2,2,3,3,4}
 
+rta:= RemoveDuplicates(tesT)
+fmt.Println("RTA ES ", rta)
 }
 
 // reverse String
