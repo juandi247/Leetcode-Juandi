@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"warmup/trees"
+)
 
 func main() {
 
@@ -53,32 +56,36 @@ PreorderInversed(A)
 fmt.Print("\n ---- \n")
 
 
+AA := &Node{Value: 8}
+BB := &Node{Value: 9}
+CC := &Node{Value: 10}
+DD := &Node{Value: 11}
+EE := &Node{Value: 12}
+FF := &Node{Value: 13}
+GG := &Node{Value: 14}
+HH := &Node{Value: 15}
 
- AA := &Node{Value: 8}
-    BB := &Node{Value: 9}
-    CC := &Node{Value: 10}
-    DD := &Node{Value: 11}
-    EE := &Node{Value: 12}
-    FF := &Node{Value: 13}
-    GG := &Node{Value: 14}
-    HH := &Node{Value: 15}
+// Nivel 2
+II := &Node{Value: 4, Left: AA, Right: BB}
+JJ := &Node{Value: 5, Left: CC, Right: DD}
+KK := &Node{Value: 6, Left: EE, Right: FF}
+LL := &Node{Value: 7, Left: GG, Right: HH}
 
-    // Nivel 2
-    II := &Node{Value: 4, Left: AA, Right: BB}
-    JJ := &Node{Value: 5, Left: CC, Right: DD}
-    KK := &Node{Value: 6, Left: EE, Right: FF}
-    LL := &Node{Value: 7, Left: GG, Right: HH}
+// Nivel 1
+MM := &Node{Value: 2, Left: II, Right: JJ}
+NN := &Node{Value: 3, Left: KK, Right: LL}
 
-    // Nivel 1
-    MM := &Node{Value: 2, Left: II, Right: JJ}
-    NN := &Node{Value: 3, Left: KK, Right: LL}
-
-    // Root
-    OO := &Node{Value: 1, Left: MM, Right: NN}
+// Root
+OO := &Node{Value: 1, Left: MM, Right: NN}
 
 
-	fmt.Println("AAA BINARY TREE IN ORDER")
+fmt.Println("AAA BINARY TREE IN ORDER")
 InOrder(OO)
+listaVacia:= []int{}
+
+
+result:= mitrees.Pre_order_search(A, listaVacia)
+fmt.Println("RESULTADOOOO: deberia ser el mismo del priemro", result)
 }
 
 // reverse String
