@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"warmup/trees"
+	// "warmup/trees"
 )
 
 func main() {
@@ -81,10 +81,10 @@ OO := &Node{Value: 1, Left: MM, Right: NN}
 
 fmt.Println("AAA BINARY TREE IN ORDER")
 InOrder(OO)
-listaVacia:= []int{}
+// listaVacia:= []int{}
 
 
-result:= mitrees.Pre_order_search(A, listaVacia)
+// result:= mitrees.Pre_order_search(A, listaVacia)
 fmt.Println("RESULTADOOOO: deberia ser el mismo del priemro", result)
 }
 
