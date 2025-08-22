@@ -70,6 +70,22 @@ func DFS_Test(node *Node) {
 
 
 
+func invertBinaryTRee(node *Node){
+
+	if node==nil{
+		return
+	}
+
+	invertBinaryTRee(node.Left)
+	invertBinaryTRee(node.Right)
+
+	temp:= node.Left
+	node.Left= node.Right
+	node.Right=temp
+}
+
+
+
 
 // this always should be a queue
 func BFS_Test(node *Node) {
