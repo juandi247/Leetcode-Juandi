@@ -20,18 +20,37 @@ type node struct{
 	next *node
 }
 
-func MinStack(val int) *node{
-	return &node{
-		val: val,
-	}
+type Stack struct{
+	head *node
+	minVal int
 }
 
-func (currentHead *node)push(n *node){
-	 n.next= currentHead
+
+func minStack() *Stack{
+	return &Stack{}
 }
 
-// func pop
+// func add
 
+func (s *Stack) push(val int){
+	NewNode:= &node{val: val}
+	NewNode.next=s.head
+	s.minVal= min(NewNode.val, s.minVal)	
+	s.head=NewNode
+}
+
+func (s *Stack) pop(){
+	s.head=s.head.next
+
+}
+
+func(s *Stack)top()*node{
+	return s.head
+}
+
+func(s *Stack)min()int{
+	return s.minVal
+}
 
 
 
