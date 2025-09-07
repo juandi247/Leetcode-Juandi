@@ -85,7 +85,7 @@ InOrder(OO)
 
 
 // result:= mitrees.Pre_order_search(A, listaVacia)
-fmt.Println("RESULTADOOOO: deberia ser el mismo del priemro", result)
+fmt.Println("RESULTADOOOO: deberia ser el mismo del priemro", )
 }
 
 // reverse String
