@@ -38,41 +38,49 @@ Inside we traverse the array just 1, because we already now its sorted, so we do
 to evaluate for each value inside, another value
 */
 
-func ThreeSum(nums []int) [][]int {    
-	slices.Sort(nums)
+func ThreeSum(nums []int) [][]int {
+    slices.Sort(nums)
+    antwort := [][]int{}
 
-	antwort:= [][]int{}
-	for i:=0; i<len(nums)-1; i++{
-		start := i+1
-		end := len(nums) - 1
-
-        if i>0 && nums[i]==nums[i-1]{
+    for i := 0; i < len(nums)-2; i++ {
+        // evitar duplicados de i
+        if i > 0 && nums[i] == nums[i-1] {
             continue
         }
 
-		for start < end {
-			sum:= nums[i]+ nums[start]+ nums[end]
+        start := i + 1
+        end := len(nums) - 1
 
+        for start < end {
+            sum := nums[i] + nums[start] + nums[end]
 
-			if sum==0{
-                fmt.Println("la suma dio cero de", nums[i], "+ ", nums[start], "+ ", nums[end])
-				newArray:= [3]int{nums[i],nums[start], nums[end]}
-				antwort=append(antwort, newArray[:])
+            if sum == 0 {
+                newArray := []int{nums[i], nums[start], nums[end]}
+                antwort = append(antwort, newArray)
+
                 start++
-			}
+                end--
 
-			if sum<0{
-				start++
-			}else{
-				end--
-			}
-		}
+                // evitar duplicados en start
+                for start < end && nums[start] == nums[start-1] {
+                    start++
+                }
+                // evitar duplicados en end
+                for start < end && nums[end] == nums[end+1] {
+                    end--
+                }
 
-	}
+            } else if sum < 0 {
+                start++
+            } else {
+                end--
+            }
+        }
+    }
 
-	return antwort
-
+    return antwort
 }
+
 
 
 
@@ -133,4 +141,27 @@ func compareTriplets(a, b [][]int) bool {
         }
     }
     return true
+}
+
+
+112  78   101   119
+56   98   114    49
+
+
+
+
+
+
+
+
+for i:=0; i<len(arr)/2; i++{
+    for j:=0; j<len(arr)/2; j++{
+        max:= blalbal
+
+
+
+    }
+
+
+
 }
