@@ -70,8 +70,9 @@ var mySlice []int //here we define a slice, its NOT an array
 
 // }
 
-func main(){
-	for i:=1; i<16; i++{
-fmt.Println(i)
+func main() {
+	for i := 1; i < 16; i++ {
+		fmt.Println(i)
 	}
-	}
+}
+
