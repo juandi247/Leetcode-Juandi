@@ -2,6 +2,16 @@ package main
 
 //https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
+
+type *Node struct{
+	Val int
+	Left *Node
+	Right *Node
+}
+
+
+
+
 func maxDepthBinaryTree(root *Node) int {
 
 	// we do a DFS, because we need to see the depth
