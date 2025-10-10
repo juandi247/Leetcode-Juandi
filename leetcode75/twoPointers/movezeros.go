@@ -1,6 +1,5 @@
 package main
 func moveZeroes(nums []int)  {
-
     if len(nums)<=1{
         return
     }
