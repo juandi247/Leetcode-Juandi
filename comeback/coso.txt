@@ -1,0 +1,138 @@
+ctar ciclo en Linked List
+
+Implementa una función que determine si una lista enlazada tiene un ciclo.
+
+func HasCycle(head *Node) bool
+
+Input
+
+Lista enlazada donde Next puede apuntar a un nodo anterior.
+
+Ejemplo:
+
+1 -> 2 -> 3 -> 4
+     ^         |
+     |_________|
+3. LRU Cache
+
+Implementa una LRU Cache con capacidad fija.
+
+type LRUCache struct {}
+
+func Constructor(capacity int) LRUCache
+func (c *LRUCache) Get(key int) int
+func (c *LRUCache) Put(key int, value int)
+
+Input
+
+capacity = 2
+
+Put(1,1)
+Put(2,2)
+Get(1)
+Put(3,3)
+Get(2)
+Put(4,4)
+Get(1)
+Get(3)
+Get(4)
+4. Copy Linked List con Random Pointer
+
+Cada nodo tiene un puntero extra Random.
+
+type Node struct {
+    Val    int
+    Next   *Node
+    Random *Node
+}
+
+func CopyRandomList(head *Node) *Node
+
+Input
+
+Lista enlazada donde Random puede apuntar a cualquier nodo o nil.
+
+5. Implementar Stack thread-safe
+
+Implementa una estructura Stack concurrente segura.
+
+type Stack struct {}
+
+func (s *Stack) Push(v int)
+func (s *Stack) Pop() (int, bool)
+
+Input
+
+Múltiples goroutines ejecutando:
+
+Push(1)
+Push(2)
+Pop()
+Push(3)
+Pop()
+6. Worker Pool
+
+Implementa un worker pool que procese jobs concurrentemente.
+
+func WorkerPool(workers int, jobs []int) []int
+
+Cada job debe calcular:
+
+result = job * job
+
+Input
+
+workers = 3
+jobs = [1,2,3,4,5,6,7,8]
+7. Merge de canales
+
+Implementa una función que combine múltiples canales en uno solo.
+
+func Merge(channels ...<-chan int) <-chan int
+
+Input
+
+Tres canales que emiten:
+
+ch1: 1,2,3
+ch2: 4,5
+ch3: 6,7,8
+8. Implementar Semaphore con canales
+
+Implementa un semaphore que limite concurrencia.
+
+type Semaphore struct {}
+
+func NewSemaphore(n int) *Semaphore
+func (s *Semaphore) Acquire()
+func (s *Semaphore) Release()
+
+Input
+
+limit = 3
+10 goroutines intentando ejecutar trabajo simultáneamente
+9. Pipeline concurrente
+
+Implementa un pipeline:
+
+generator -> square -> filterEven -> output
+
+Funciones esperadas:
+
+func Generator(nums []int) <-chan int
+func Square(in <-chan int) <-chan int
+func FilterEven(in <-chan int) <-chan int
+
+Input
+
+nums = [1,2,3,4,5,6]
+10. Concurrent Map Counter
+
+Implementa una función que cuente frecuencia de números usando múltiples goroutines.
+
+func ConcurrentFrequency(nums []int, workers int) map[int]int
+
+Input
+
+nums = [1,2,2,3,3,3,4,4,4,4]
+workers = 3
